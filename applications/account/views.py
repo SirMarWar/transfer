@@ -21,6 +21,7 @@ def registerPage(request):
     
     return render(request, 'account/register.html', { 'form': form })
 
+
 def loginPage(request):
     context = {}
     if request.method == 'POST':
@@ -28,6 +29,7 @@ def loginPage(request):
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            login(request, username)
-            redirect('home')
+            login(request, user)
+            return redirect('homepage')
     return render(request, 'account/login.html', context)
+

@@ -1,4 +1,4 @@
-{% extends 'base/Payyed/base.html' %}
+{% extends 'base/Payyed/base_login.html' %}
 {% load static%}
 
 {% block content %}
@@ -17,7 +17,7 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="emailAddress">UserName</label>
-                    <input type="email" class="form-control" id="username" name="username" required=""
+                    <input type="text" class="form-control" id="username" name="username" required=""
                         placeholder="Enter Username">
                 </div>
                 <div class="form-group">
