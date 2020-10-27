@@ -1,4 +1,7 @@
 # transfer
+#Install postgres
+  https://phoenixnap.com/kb/how-to-install-postgresql-on-ubuntu
+  
 #save requirements:
   $pip freeze > requirements.txt
 
