@@ -2,6 +2,9 @@
 #Install postgres
   https://phoenixnap.com/kb/how-to-install-postgresql-on-ubuntu
   https://www.liquidweb.com/kb/change-a-password-for-postgresql-on-linux-via-command-line/
+ 
+ Note: if you need to change the password perhaps you would need to start the engine
+ sudo /etc/init.d/postgresql start
   
 #save requirements:
   $pip freeze > requirements.txt
