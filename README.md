@@ -18,13 +18,11 @@
     or
     $apt-get install python3-dev
 
-#migrate the tables to de database, go to the folder that holds manage.py and in the console
-  $python manage.py migrate
-#run seeder, run on the console
+#run seeder to create, migrate and populate DB, run on the console
   python manage.py shell
   on the shell write
   >>> from moneytransfer.populate import *
-  >>> poblar()
+  >>> InitDB()
 
 
   
