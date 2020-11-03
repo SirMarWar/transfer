@@ -1,34 +1,46 @@
-﻿{% extends 'base/Payyed/default.html' %}
-{% load static%}
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<!-- styling
-======================================== -->
-{% block styling %}
-{% endblock %}
-<!-- styling end -->
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="{% static 'templates/Payyed/images/favicon.png' %} " rel="icon">
+  <title>Payyed - Money Transfer and Online Payments HTML Template</title>
+  <meta name="description"
+    content="This professional design html template is for build a Money Transfer and online payments website.">
+  <meta name="author" content="harnishdesign.net">
 
-<!-- header
-======================================== -->
-{% block header %}
+  <!-- Web Fonts
+============================================= -->
+  <link rel='stylesheet'
+    href='https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i' type='text/css'>
 
-{% endblock %}
-<!-- header end -->
+  <!-- Stylesheet
+============================================= -->
+  <link rel="stylesheet" type="text/css" href="{% static 'templates/Payyed/vendor\bootstrap\css\bootstrap.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'templates/Payyed/vendor\font-awesome\css\all.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'templates/Payyed/css\stylesheet.css'%}">
+</head>
 
-<!-- Content
-  ============================================= -->
-{% block content %}
-{% endblock %}
-<!-- Content end -->
+<body>
 
-<!-- Footer
-  ============================================= -->
-{% block footer %}
-{%include 'base/Payyed/footer.html'%}
-{% endblock %}
-<!-- footer end -->
+  <!-- Preloader -->
+  <div id="preloader">
+    <div data-loader="dual-ring"></div>
+  </div>
+  <!-- Preloader End -->
 
-<!-- styling
-  ============================================= -->
-{% block scripting %}
-{% endblock %}
-<!-- styling end -->
+  <div id="main-wrapper" class="h-100">
+    {%block content%}
+    {%endblock%}
+  </div>
+
+  <!-- Script -->
+  <script src="{% static 'templates/Payyed/vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'templates/Payyed/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'templates/Payyed/js/theme.js'%}"></script>
+</body>
+
+</html>

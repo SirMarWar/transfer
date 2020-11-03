@@ -1,12 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    {% load static %}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-    <link href="{% static '/templates/payyed/images/favicon.png' %}" rel="icon">
+    <link href="{% static 'templates/Payyed/images/favicon.png' %}" rel="icon">
     <title>Payyed - Money Transfer and Online Payments HTML Template</title>
     <meta name="description"
         content="This professional design html template is for build a Money Transfer and online payments website.">
@@ -24,6 +25,9 @@
         href="{% static 'templates/Payyed/vendor/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'templates/Payyed/vendor/font-awesome/css/all.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'templates/Payyed/css/stylesheet.css' %}">
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'templates/Payyed/vendor/currency-flags/css/currency-flags.min.css' %}">
+
     {% block styling %}
     {% endblock %}
 </head>
@@ -70,6 +74,7 @@
     <script src="{% static 'templates/Payyed/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'templates/Payyed/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'templates/Payyed/js/theme.js' %}"></script>
+
     {% block scripting %}
     {% endblock %}
 </body>
