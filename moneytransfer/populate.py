@@ -1,17 +1,22 @@
 from __future__ import unicode_literals
+import sys
+import subprocess
 
 from django.utils import timezone
 from django.db import models
 
-#from usuario.models import Perfil, OpcionesPerfil, Departamento
-#from empresa.models import Empresa, EmpresaEstado, CorrelativoTipo
-#from factura.models import FacturaEstado, TipoFactura
-#from finanzas.models import TipoCierre, TipoMoneda, Moneda
-
-#from productos.models import Productos, ProductoRegistrado, UnidadMedida
-
 from django.contrib.auth.models import User
 
+def InstallEnvironment(self):
+    self.apt = "apt "
+    self.ins = "install "
+    self.packages = "install python3 python3-pip python3-dev postgresql postgresql-contrib"
+    self.color.print_green("[+] Installation of the environment startint:")
+    for self.items in self.package.split():
+        self.command = str(self.apt) + str(self.ins) + str(self.items)
+
+        subprocess.run(self.command.split())
+        self.color.print_yellow("\t[+] Package [{}] Installed".format(str(self.items)))
 
 def InitDB():
     #CREATE DATABASE
