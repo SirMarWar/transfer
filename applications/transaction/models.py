@@ -1,5 +1,5 @@
 from django.db import models
-from ..country.models import Country
+from ..shared.models import Country
 from ..account.models import Profile
 
 # Create your models here.

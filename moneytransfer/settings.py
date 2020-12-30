@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     "applications.account",
     "applications.dashboard",
     "applications.transaction",
-    # "applications.status",
-    "applications.country",
+    "applications.shared",
+    # "applications.country",
 ]
 
 MIDDLEWARE = [
