@@ -236,19 +236,20 @@
                 style="margin-left: -190px; display: none; height: 320px; padding-top: 10px; margin-top: 0px; padding-bottom: 10px; margin-bottom: 0px;">
                 <li class="text-center text-3 py-2">Hi, {{request.user}}</li>
                 <li class="dropdown-divider mx-n3"></li>
-                <li><a class="dropdown-item" href="settings-profile.html"><i class="fas fa-user"></i>My Profile</a></li>
-                <li><a class="dropdown-item" href="settings-Security.html"><i class="fas fa-shield-alt"></i>Security</a>
+                <li><a class="dropdown-item" href="{% url 'profileinfo' %}"><i class="fas fa-user"></i>My Profile</a>
                 </li>
-                <li><a class="dropdown-item" href="settings-payment-methods.html"><i
-                      class="fas fa-credit-card"></i>Payment Methods</a></li>
-                <li><a class="dropdown-item" href="settings-notifications.html"><i
-                      class="fas fa-bell"></i>Notifications</a></li>
-                <li class="dropdown-divider mx-n3"></li>
-                <li><a class="dropdown-item" href="help.html"><i class="fas fa-life-ring"></i>Need Help?</a></li>
-                <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-                </li>
-              </ul>
             </li>
+            <li><a class="dropdown-item" href="{% url 'profilebank' %}"><i class="fas fa-credit-card"></i>Cards and
+                Accounts</a></li>
+            <li><a class="dropdown-item" href="{% url 'profilenotifications' %}"><i
+                  class="fas fa-bell"></i>Notifications</a>
+            </li>
+            <li class="dropdown-divider mx-n3"></li>
+            <li><a class="dropdown-item" href="help.html"><i class="fas fa-life-ring"></i>Need Help?</a></li>
+            <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+            </li>
+          </ul>
+          </li>
           </ul>
         </nav>
         <!-- My Profile end -->
