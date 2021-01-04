@@ -1,0 +1,19 @@
+[
+    {
+        "model": "account.profile",
+        "pk": 1,
+        "fields": {
+            "user": 2,
+            "birth": "1987-01-03",
+            "name": "Customer1",
+            "phone": "73658912",
+            "date_created": "2021-01-03",
+            "img": "",
+            "language": null,
+            "timezone": null,
+            "state": 1,
+            "group": 1,
+            "address": null
+        }
+    }
+]

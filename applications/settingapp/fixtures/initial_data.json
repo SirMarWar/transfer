@@ -1,0 +1,56 @@
+[
+    {
+        "model": "auth.group",
+        "pk": 1,
+        "fields": {
+            "name": "Customer",
+            "permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$r2xIEfH4SerC$qbDrXxMOUi8Wc7Wa9Zx3AASffecG+bLqciuKgAPW4bk=",
+            "last_login": "2021-01-04T03:30:35.280Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "ing.marcelo.sanabria@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2021-01-04T03:29:30.411Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$Ey1ulCkWRy2X$AnN54RG7g2W9IU9XvasvGL4LcF/jvVwWhEL3cQUr6xw=",
+            "last_login": "2021-01-04T03:31:25.287Z",
+            "is_superuser": false,
+            "username": "Customer1",
+            "first_name": "",
+            "last_name": "",
+            "email": "customer1@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2021-01-04T03:30:18Z",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user_groups",
+        "pk": 1,
+        "fields": {
+            "user": 2,
+            "group": 1
+        }
+    }
+]

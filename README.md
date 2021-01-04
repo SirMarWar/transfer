@@ -24,5 +24,11 @@
   >>> from moneytransfer.populate import *
   >>> InitDB()
 
+#NOTE SEEDING THE DATA BASE IS USING THE FIXTURES FIXTURE OF MANAGE.PY
+# Write Fixtures
+# python manage.py dumpdata auth.user --indent 4 > Applications/Fixtures/auth_user.json
+
+# load fixtures
+# python manage.py loaddata applications\Fixtures\account_type.json --app account.type
 
   

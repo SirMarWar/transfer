@@ -1,26 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
-
-
-class Type(models.Model):
-    code = models.CharField(max_length=5)
-    name = models.CharField(max_length=50)
-    enable = models.BooleanField()
-
-    def __str__(self):
-        return self.code + " :: " + self.name
-
-
-# Create your models here.
-class State(models.Model):
-    code = models.CharField(max_length=5)
-    name = models.CharField(max_length=50)
-    enable = models.BooleanField()
-    id_type = models.ForeignKey(Type, on_delete=models.DO_NOTHING)
-
-    def __str__(self):
-        return self.code + " :: " + self.name
-
+from django.contrib.auth.models import User, Group
+from ..shared.models import State, Type
 
 # Create your models here.
 class Profile(models.Model):
@@ -30,10 +10,11 @@ class Profile(models.Model):
     phone = models.CharField(max_length=200, null=True)
     date_created = models.DateField(auto_now_add=True, null=True)
     img = models.ImageField(upload_to="profile", null=True, blank=True)
-    language = models.CharField(max_length=50)
-    timezone = models.CharField(max_length=50)
+    language = models.CharField(max_length=50, null=True, blank=True)
+    timezone = models.CharField(max_length=50, null=True, blank=True)
     state = models.ForeignKey(State, on_delete=models.DO_NOTHING)
-    address = models.CharField(max_length=200)
+    group = models.ForeignKey(Group, on_delete=models.DO_NOTHING)
+    address = models.CharField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.name

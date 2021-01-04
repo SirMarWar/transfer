@@ -2,12 +2,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 from .forms import CreateUserForm
+from .models import Profile, State
 from moneytransfer.decorators import unauthenticated_user, allowed_users
 
 
@@ -19,7 +20,13 @@ def registerPage(request):
     if request.method == "POST":
         form = CreateUserForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+
+            group = Group.objects.get(name="customer")
+            user.groups.add(group)
+
+            Profile.objects.create(user=user, state=State.objects.get(code="CTMA"))
+
             email = form.cleaned_data["email"]
             messages.success(request, f"Account was created for {email}")
             return redirect("login")

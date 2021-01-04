@@ -27,7 +27,7 @@ def InitDB():
     """
     CREANDO LA BASE DE DATOS
     """
-    print("Creando base de datos")
+    print("Init DataBase")
     import psycopg2
     from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
@@ -38,33 +38,54 @@ def InitDB():
     cursor = con.cursor()
     name_Database = "moneytransfer"
     # Create table statement
+    sqlCreateDatabase = "drop database if exists " + name_Database + ";"
+    # Create a table in PostgreSQL database
+    cursor.execute(sqlCreateDatabase)
+    print("Deleting BD if exists")
+
+    name_Database = "moneytransfer"
+    # Create table statement
     sqlCreateDatabase = "create database " + name_Database + ";"
     # Create a table in PostgreSQL database
     cursor.execute(sqlCreateDatabase)
-    print("Database ----> Creada!")
+    print("Database ----> Successfuly created!")
 
     """
     MIGRAR TABLAS A LA BASE DE DATOS
     """
-    print("Migrando tablas a la BD...!")
+    print("Creando Migracion !")
     from django.core.management import execute_from_command_line
 
     execute_from_command_line(["manage.py", "makemigrations"])
-    print("MakeMigrations ----> Terminada!")
+    print("Migration files ----> Success!")
+
+    print("Migrating tables to the DB!")
     execute_from_command_line(["manage.py", "migrate"])
-    print("Migracion ----> Terminada!")
+    print("Migracion ----> Success!")
 
     """
     POBLAR TABLAS
     """
-    print("Iniciando poblacion de datos")
+    print("Init database population")
 
     ### AUTH / SUPER USER ###
-    User.objects.create_superuser("admin", "ing.marcelo.sanabria@gmail.com", "SanabriA")
-    print("super user ----> Creado!")
+    # User.objects.create_superuser("admin", "ing.marcelo.sanabria@gmail.com", "password")
 
-    customer1 = User.objects.create_user("customer1", "customer1@gmail.com", "SanabriA")
-    customer1.is_superuser = False
-    customer1.is_staff = False
-    customer1.save()
-    print("customer1 ----> Creado!")
+    # print("super user ----> created!")
+
+    # Write Fixtures
+    # python manage.py dumpdata auth.user --indent 4 > Applications/Fixtures/auth_user.json
+
+    # load fixtures
+    # python manage.py loaddata applications\Fixtures\account_type.json --app account.type
+
+    """execute_from_command_line(
+        [
+            "manage.py",
+            "loaddata",
+            "applications\Fixtures\\account_profile.json",
+        ]
+    )"""
+
+    execute_from_command_line(["manage.py", "loaddata", "initial_data.json"])
+    print("Database ----> Updated!")

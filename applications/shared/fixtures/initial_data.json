@@ -1,0 +1,61 @@
+[
+    {
+        "model": "shared.type",
+        "pk": 1,
+        "fields": {
+            "code": "USR",
+            "name": "User",
+            "enable": true
+        }
+    },
+    {
+        "model": "shared.state",
+        "pk": 1,
+        "fields": {
+            "code": "USRA",
+            "name": "User Active",
+            "enable": true,
+            "id_type": 1
+        }
+    },
+    {
+        "model": "shared.state",
+        "pk": 2,
+        "fields": {
+            "code": "USRI",
+            "name": "User Inactive",
+            "enable": true,
+            "id_type": 1
+        }
+    },
+    {
+        "model": "shared.state",
+        "pk": 3,
+        "fields": {
+            "code": "USRPA",
+            "name": "User Pending Approval",
+            "enable": true,
+            "id_type": 1
+        }
+    },
+    {
+        "model": "shared.state",
+        "pk": 4,
+        "fields": {
+            "code": "USRPE",
+            "name": "User pending email",
+            "enable": true,
+            "id_type": 1
+        }
+    },
+    {
+        "model": "shared.state",
+        "pk": 5,
+        "fields": {
+            "code": "USRB",
+            "name": "User Blocked",
+            "enable": true,
+            "id_type": 1
+        }
+    }
+]
