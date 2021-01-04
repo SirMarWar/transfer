@@ -6,8 +6,9 @@ from ..shared.models import State, Type
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     birth = models.DateField(auto_now=False, auto_now_add=False)
-    name = models.CharField(max_length=200, null=True)
-    phone = models.CharField(max_length=200, null=True)
+    firstname = models.CharField(max_length=50, null=True)
+    lastname = models.CharField(max_length=100, null=True)
+    phone = models.CharField(max_length=20, null=True)
     date_created = models.DateField(auto_now_add=True, null=True)
     img = models.ImageField(upload_to="profile", null=True, blank=True)
     language = models.CharField(max_length=50, null=True, blank=True)

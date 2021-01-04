@@ -77,7 +77,8 @@ def resetpassword(request):
 
 
 def profileinfo(request):
-    context = {}
+    profile = Profile.objects.get(user=request.user)
+    context = {"profile": profile}
     return render(request, "profile/info.html", context)
 
 

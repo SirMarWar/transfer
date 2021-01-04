@@ -5,7 +5,8 @@
         "fields": {
             "user": 2,
             "birth": "1987-01-03",
-            "name": "Customer1",
+            "firstname": "Customer1",
+            "lastname": "last name1",
             "phone": "73658912",
             "date_created": "2021-01-03",
             "img": "",

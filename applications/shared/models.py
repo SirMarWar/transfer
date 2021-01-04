@@ -16,6 +16,9 @@ class Type(models.Model):
 class State(models.Model):
     code = models.CharField(max_length=5)
     name = models.CharField(max_length=50)
+    display = models.CharField(max_length=50, null=True)
+    color = models.CharField(max_length=50, null=True)
+    icon = models.CharField(max_length=50, null=True)
     enable = models.BooleanField()
     id_type = models.ForeignKey(Type, on_delete=models.CASCADE)
 

@@ -14,6 +14,9 @@
         "fields": {
             "code": "USRA",
             "name": "User Active",
+            "display": null,
+            "color": null,
+            "icon": null,
             "enable": true,
             "id_type": 1
         }
@@ -24,6 +27,9 @@
         "fields": {
             "code": "USRI",
             "name": "User Inactive",
+            "display": null,
+            "color": null,
+            "icon": null,
             "enable": true,
             "id_type": 1
         }
@@ -34,6 +40,9 @@
         "fields": {
             "code": "USRPA",
             "name": "User Pending Approval",
+            "display": null,
+            "color": null,
+            "icon": null,
             "enable": true,
             "id_type": 1
         }
@@ -44,6 +53,9 @@
         "fields": {
             "code": "USRPE",
             "name": "User pending email",
+            "display": null,
+            "color": null,
+            "icon": null,
             "enable": true,
             "id_type": 1
         }
@@ -54,6 +66,9 @@
         "fields": {
             "code": "USRB",
             "name": "User Blocked",
+            "display": null,
+            "color": null,
+            "icon": null,
             "enable": true,
             "id_type": 1
         }
